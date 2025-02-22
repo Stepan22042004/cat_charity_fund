@@ -6,8 +6,11 @@ from sqlalchemy.orm import validates
 from app.core.db import Base
 
 
+NAME_LEN = 100
+
+
 class CharityProject(Base):
-    name = Column(String(100), unique=True, nullable=False)
+    name = Column(String(NAME_LEN), unique=True, nullable=False)
     description = Column(Text, nullable=False)
     full_amount = Column(Integer, nullable=False)
     invested_amount = Column(Integer, default=0, nullable=False)

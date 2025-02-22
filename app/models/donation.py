@@ -21,7 +21,6 @@ class Donation(Base):
 
     @validates('full_amount', 'invested_amount')
     def validate_positive_amounts(self, key, value):
-        print(value)
         if value < 0:
             raise ValueError(f"Поле {key} должно быть больше 0.")
         return value
