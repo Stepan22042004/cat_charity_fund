@@ -66,7 +66,7 @@ alembic upgrade head
 
 ```  
 
-flask run uvicorn app.main:app --reload
+uvicorn app.main:app --reload
 ```  
 ### Стек использованных технологий  
 
